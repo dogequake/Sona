@@ -1,0 +1,92 @@
+﻿@model Sona.Models.News
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<!-- Blog Details Hero Section Begin -->
+<section class="blog-details-hero set-bg" data-setbg="../blog/blog-details/blog-details-hero.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 offset-lg-1">
+                <div class="bd-hero-text">
+                    <span>@Model.Category.Name_Category</span>
+                    <h2>@Model.Title1</h2>
+                    <ul>
+                        <li class="b-time"><i class="icon_clock_alt"></i> @Model.DateWrite.ToShortDateString()</li>
+                        <li><i class="icon_profile"></i> @Model.Writer</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Blog Details Hero End -->
+<!-- Blog Details Section Begin -->
+<section class="blog-details-section" style="margin-bottom: 80px">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 offset-lg-1">
+                <div class="blog-details-text">
+                    <div class="bd-title">
+                        <p>
+                            @Model.ParagraphText1
+                        </p>
+                        <p>
+                            @Model.ParagraphText2
+                        </p>
+                    </div>
+                    <div class="bd-pic">
+                        <div class="bp-item">
+                            <img src="img/blog/blog-details/blog-details-1.jpg" alt="">
+                        </div>
+                        <div class="bp-item">
+                            <img src="img/blog/blog-details/blog-details-2.jpg" alt="">
+                        </div>
+                        <div class="bp-item">
+                            <img src="img/blog/blog-details/blog-details-3.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="bd-more-text">
+                        <div class="bm-item">
+                            <h4>@Model.Title2</h4>
+                            <p>
+                                @Model.ParagraphText3
+                            </p>
+                        </div>
+                        <div class="bm-item">
+                            <h4>@Model.Title3</h4>
+                            <p>
+                                @Model.ParagraphText4
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bd-more-text">
+                        <div class="bm-item">
+                            <h4>@Model.Title4</h4>
+                            <p>
+                                @Model.ParagraphText5
+                            </p>
+                        </div>
+                    </div>
+                    <div class="tag-share">
+                        <div class="tags">
+                            <a href="#"></a>
+                            <a href="#">Camping</a>
+                            <a href="#">Event</a>
+                        </div>
+                        <div class="social-share">
+                            <span>Share:</span>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-tripadvisor"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-youtube-play"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Blog Details Section End -->

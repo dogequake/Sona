@@ -1,0 +1,52 @@
+﻿@model Sona.ViewModels.DataViewModel
+
+@foreach (var item in Model.OrderData.ToList())
+{
+    @if (item.Id < 2)
+    {
+        <form asp-controller="Orders" asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="check-date">
+                <label asp-for="@item.DateCheckin">Вьезд:</label>
+                <input asp-for="@item.DateCheckin" />
+                <span asp-validation-for="@item.DateCheckin"></span>
+            </div>
+            <div class="check-date">
+                <label asp-for="@item.DateCheckout">Выезд:</label>
+                <input asp-for="@item.DateCheckout" />
+                <span asp-validation-for="@item.DateCheckout"></span>
+            </div>
+            <div class="select-option">
+                <label asp-for="@item.CountGuest">Количество гостей:</label>
+                <select asp-for="@item.CountGuest">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                </select>
+                <span asp-validation-for="@item.CountGuest"></span>
+            </div>
+            <div class="select-option">
+                <label asp-for="@item.CountRoom">Количество комнат:</label>
+                <select asp-for="@item.CountRoom">
+                <option value="1">1 комната</option>
+                <option value="2">2 комнаты</option>
+                </select>
+                <span asp-validation-for="@item.CountRoom"></span>
+            </div>
+            <div class="check-date">
+                <label asp-for="@item.NameClient">Как к вам обращаться</label>
+                <input asp-for="@item.NameClient"  />
+                <span asp-validation-for="@item.NameClient"></span>
+            </div>
+            <div class="check-date">
+                <label asp-for="@item.PhonenumClient">Телефон для связи с вами:</label>
+                <input asp-for="@item.PhonenumClient" />
+                <span asp-validation-for="@item.PhonenumClient"></span>
+            </div>
+            <button type="submit">Оставить заявку</button>
+        </form>
+    }
+    
+}

@@ -1,0 +1,286 @@
+﻿@model Sona.ViewModels.DataViewModel
+
+@{
+    ViewData["Title"] = "Главяная страница";
+}
+
+<!-- Hero Section Begin -->
+<section class="hero-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="hero-text">
+                    <h1>Sona люкс-отель</h1>
+                    <p>
+                        Вот лучшие сайты бронирования отелей, включая рекомендации по 
+                        международным поездкам и поиску недорогих гостиничных номеров.
+                    </p>
+                    <a href="#" class="primary-btn">Закажите сейчас</a>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-5 offset-xl-2 offset-lg-1">
+                <div class="booking-form">
+                    <h3>Бронирование Вашего Отеля</h3>
+                    @await Html.PartialAsync("../Orders/Create")
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hero-slider owl-carousel">
+        <div class="hs-item set-bg" data-setbg="../img/hero/hero-1.jpg"></div>
+        <div class="hs-item set-bg" data-setbg="../img/hero/hero-2.jpg"></div>
+        <div class="hs-item set-bg" data-setbg="../img/hero/hero-3.jpg"></div>
+    </div>
+</section>
+<!-- Hero Section End -->
+<!-- About Us Section Begin -->
+<section class="aboutus-section spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="about-text">
+                    <div class="section-title">
+                        <span>О нас</span>
+                        <h2>Лучший <br />Интернациональный Отель</h2>
+                    </div>
+                    <p class="f-para">
+                        Sona является ведущим сайтом онлайн-размещения. 
+                        Мы очень любим путешествовать. Каждый день мы вдохновляем миллионы 
+                        путешественников и наш сайт доступен на всех популярных языках.
+                    </p>
+                    <p class="s-para">
+                        Поэтому, когда дело доходит до бронирования идеального отеля, 
+                        аренды для отдыха, курорта, апартаментов, гостевого дома 
+                        или домика на дереве, мы вас обеспечим.
+                    </p>
+                    <a asp-action="AboutUs" class="primary-btn about-btn">Узнать больше</a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="about-pic">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <img src="~/img/about/about-1.jpg" alt="">
+                        </div>
+                        <div class="col-sm-6">
+                            <img src="~/img/about/about-2.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- About Us Section End -->
+<!-- Services Section End -->
+<section class="services-section spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <span>Что мы можем предложить</span>
+                    <h2>Наши сервисы</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-sm-6">
+                <div class="service-item">
+                    <i class="flaticon-036-parking"></i>
+                    <h4>План путешествия</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="service-item">
+                    <i class="flaticon-033-dinner"></i>
+                    <h4>Кейтеринговое обслуживание</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="service-item">
+                    <i class="flaticon-026-bed"></i>
+                    <h4>Нянички</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="service-item">
+                    <i class="flaticon-024-towel"></i>
+                    <h4>Прачечная</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="service-item">
+                    <i class="flaticon-044-clock-1"></i>
+                    <h4>Нанять водителя</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="service-item">
+                    <i class="flaticon-012-cocktail"></i>
+                    <h4>Бар & Выпивка</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Services Section End -->
+<!-- Testimonial Section Begin -->
+<section class="testimonial-section spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <span>Рекомендации</span>
+                    <h2>Что говорят наши клиенты?</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <div class="testimonial-slider owl-carousel">
+                    @foreach (var item in Model.TestimonialData)
+                    {
+                        @if (item.Id < 4)
+                        {
+                            <div class="ts-item">
+                                <p>
+                                    @Html.DisplayFor(modelItem => item.TextTestimonial)
+                                </p>
+                                <div class="ti-author">
+                                    <div class="rating">
+                                        @if (item.CountStar == 1)
+                                        {
+                                            <i class="icon_star"></i>
+                                        }
+                                        else if (item.CountStar == 2)
+                                        {
+                                            <i class="icon_star"></i>
+                                            <i class="icon_star"></i>
+                                        }
+                                        else if (item.CountStar == 3)
+                                        {
+                                            <i class="icon_star"></i>
+                                            <i class="icon_star"></i>
+                                            <i class="icon_star"></i>
+                                        }
+                                        else if (item.CountStar == 4)
+                                        {
+                                            <i class="icon_star"></i>
+                                            <i class="icon_star"></i>
+                                            <i class="icon_star"></i>
+                                            <i class="icon_star"></i>
+                                        }
+                                        else if (item.CountStar == 5)
+                                        {
+                                            <i class="icon_star"></i>
+                                            <i class="icon_star"></i>
+                                            <i class="icon_star"></i>
+                                            <i class="icon_star"></i>
+                                            <i class="icon_star"></i>
+                                        }
+                                    </div>
+                                    <h5> - @Html.DisplayFor(modelItem => item.NameUser)</h5>
+                                </div>
+                                <img src="~/img/testimonial-logo.png" alt="">
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Testimonial Section End -->
+<!-- Blog Section Begin -->
+<section class="blog-section spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <span>Новости отеля</span>
+                    <h2>Наши новости и события</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            @foreach (var item in Model.NewsData)
+            {
+                @if (item.Id < 7)
+                {
+                    <div class="col-lg-4">
+                        <div class="blog-item set-bg" data-setbg="../img/blog/blog-1.jpg">
+                            <div class="bi-text">
+                                <span class="b-tag">@item.Category.Name_Category</span>
+                                <h4><a asp-controller="News" asp-action="Details" asp-route-id="@item?.Id">@item.Title1</a></h4>
+                                <div class="b-time"><i class="icon_clock_alt"></i> @item.DateWrite.ToShortDateString()</div>
+                            </div>
+                        </div>
+                    </div>
+                }
+                
+            }
+            
+            <div class="col-lg-4">
+                <div class="blog-item set-bg" data-setbg="../img/blog/blog-2.jpg">
+                    <div class="bi-text">
+                        <span class="b-tag">Походы</span>
+                        <h4><a href="#">Выбор фургона для поездок</a></h4>
+                        <div class="b-time"><i class="icon_clock_alt"></i> 15th April, 2019</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="blog-item set-bg" data-setbg="../img/blog/blog-3.jpg">
+                    <div class="bi-text">
+                        <span class="b-tag">Сезонное событие</span>
+                        <h4><a href="#">Путешествие на гору Ачишхо</a></h4>
+                        <div class="b-time"><i class="icon_clock_alt"></i> 21th April, 2019</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="blog-item small-size set-bg" data-setbg="../img/blog/blog-wide.jpg">
+                    <div class="bi-text">
+                        <span class="b-tag">Событие</span>
+                        <h4><a href="#">Съездить на водопад «Девичьи слезы»</a></h4>
+                        <div class="b-time"><i class="icon_clock_alt"></i> 08th April, 2019</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="blog-item small-size set-bg" data-setbg="../img/blog/blog-10.jpg">
+                    <div class="bi-text">
+                        <span class="b-tag">Путешествие</span>
+                        <h4><a href="#">Путешествие на горнолыжный курорт «Роза Хутор»</a></h4>
+                        <div class="b-time"><i class="icon_clock_alt"></i> 12th April, 2019</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Blog Section End -->
